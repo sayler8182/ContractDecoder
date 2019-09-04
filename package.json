@@ -1,0 +1,17 @@
+{
+    "name": "contract-abi-decoder",
+    "version": "0.0.1",
+    "description": "Ethereum Smart Contracts ABI decoder",
+    "main": "index.js",
+    "scripts": {},
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "mocha": "^6.2.0"
+    },
+    "devDependencies": {},
+    "author": "",
+    "license": "MIT"
+}
