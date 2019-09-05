@@ -8,6 +8,7 @@ fs.readdir(dirPath, (error, files) => {
     if (error) { return console.error(error); }
 
     // scan files
+    files = files.filter(f => f.includes(".json"));
     files.forEach((file) => {
         const Contract = require(`./input/${file}`);
         const abi = Contract.abi;
