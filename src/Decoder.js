@@ -10,7 +10,7 @@ class Decoder {
     getInterface() {
         let _data = [];
         _data = _data.concat(this._getContract());
-        _data.push(" {");
+        _data.push("{");
         for (const item of this.abi) {
             _data = _data.concat(this._getItem(item));
         }
@@ -80,8 +80,10 @@ class Decoder {
                 _data.push(" ");
                 _data.push("indexed");
             }
-            _data.push(" ");
-            _data.push(input.name);
+            if (input.name) {
+                _data.push(" ");
+                _data.push(input.name);
+            }
             if (i < item.inputs.length - 1) {
                 _data.push(",");
                 _data.push(" ");
